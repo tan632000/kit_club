@@ -1,0 +1,54 @@
+<script type="text/javascript">
+    
+    $(document).ready(()=>{
+      $('#submit_tkb_mobie').unbind().bind('click' , login);
+    });
+    
+    function login(){
+      $("#idForm_tkb_mobie").submit(function(e) {
+        e.preventDefault(); 
+        var form = $(this);
+        let username = $('#username_tkb_mobie').val();
+        let password = $('#password_tkb_mobie').val();
+        $.ajax({
+           type: "POST",
+           url: "./calender/action/load_data.php",
+           data: {username : username , password : password}, // serializes the form's elements.
+           success: function(result){
+              if(result == '1'){
+                window.location="../kit_club/calender/views/tkb.html";
+              }
+              else{
+                
+                let content_error_1 = document.getElementById('content_error_1');
+                content_error_1.innerHTML = "Username or Password error !";
+                content_error_1.style.display = 'block';
+              }
+           }
+        });
+      }); 
+    }
+
+    function check_press_login(event){
+      let key = event.which|| event.keyCode;
+      if(key == 13)
+        login();
+    }
+  </script> 
+
+<div class="modal fade" id="modal-id-tkb">
+    <div class="modal-body mobile">
+        <div class="container">
+            <div class="login_form">
+                <h1 align="center">Đăng nhập</h1>
+                <form action="" id="idForm_tkb_mobie">
+                    <input type="text" name="username" id="username_tkb_mobie" required="" placeholder="Tài khoản">
+                    <input type="password" name="password" id="password_tkb_mobie" required="" placeholder="Mật khẩu">
+                    <input type="submit" name="login" id="submit_tkb_mobie" value="Đăng nhập">
+                </form>
+                <a data-toggle="modal" href='#modal-pass-mobile'>Quên mật khẩu</a>
+            </div>
+        </div>
+
+    </div>
+</div>

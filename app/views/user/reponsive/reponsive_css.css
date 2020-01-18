@@ -1,0 +1,593 @@
+/*
+  REPONSIVE css MOBILE
+*/
+@media (min-width: 320px) and (max-width: 348px) {
+    .row {
+        margin-right: 50px;
+        margin-left: -30px;
+    }
+
+    .icon-content {
+        display: block;
+    }
+
+    .col-md-2 {
+        position: absolute;
+        z-index: 3;
+        height: auto;
+    }
+
+    .col-md-10 {
+        height: auto;
+    }
+
+    .thumbnail img {
+        margin: 0;
+        width: 125px;
+        height: 80px;
+    }
+
+    .thumbnail {
+        width: 125px;
+        float: right;
+        margin-left: 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .content {
+        width: 102%;
+        margin-top: -20px;
+        position: relative;
+        z-index: 1;
+        /* overflow: hidden; */
+        position: absolute;
+        top: 70px;
+    }
+
+    h1 {
+        /* padding-top: 10px; */
+    }
+
+    .main-footer {
+        width: 100%;
+        margin: 0;
+        /* margin-top: -14px; */
+        /* margin-left: 7px; */
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 30px;
+    }
+
+    .info p {
+        font-size: 11px;
+    }
+
+    .img-sidebar {
+        width: 43px;
+        margin: 14px 0 0 10px;
+    }
+
+    .icon-content {
+        font-size: 200%;
+        top: 90px;
+        left: 17px;
+        position: absolute;
+        z-index: 4;
+        cursor: pointer;
+        color: #222d32;
+    }
+
+    .icon-content-back {
+        font-size: 200%;
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+        color: #ffffff;
+    }
+
+    .icon-content :hover {
+        font-size: 120%;
+        transition: ease-in-out 0.5s;
+    }
+}
+
+@media (min-width: 349px) and (max-width: 375px) {
+    .row {
+        margin-right: -15px;
+        margin-left: -30px;
+    }
+    .icon-content {
+        display: block;
+    }
+
+    .col-md-2 {
+        position: absolute;
+        z-index: 3;
+        height: auto;
+    }
+
+    .col-md-10 {
+        height: auto;
+    }
+
+    .thumbnail img {
+        margin: 0;
+        width: 125px;
+        height: 80px;
+    }
+
+    .thumbnail {
+        width: 125px;
+        float: right;
+        margin-left: 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .content {
+        width: 102%;
+        margin-top: -20px;
+        position: relative;
+        z-index: 1;
+        /* overflow: hidden; */
+        position: absolute;
+        top: 70px;
+        bottom: 0;
+    }
+
+    h1 {
+        /* padding-top: 10px; */
+    }
+
+    .main-footer {
+        width: 100%;
+        margin: 0;
+        /* margin-top: -14px; */
+        /* margin-left: 7px; */
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 30px;
+    }
+
+    .info p {
+        font-size: 11px;
+    }
+
+    .img-sidebar {
+        width: 43px;
+        margin: 14px 0 0 10px;
+    }
+
+    .icon-content {
+        font-size: 200%;
+        top: 90px;
+        left: 17px;
+        position: absolute;
+        z-index: 4;
+        cursor: pointer;
+        color: #222d32;
+    }
+
+    .icon-content-back {
+        font-size: 200%;
+        top: 0px;
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+        color: #ffffff;
+    }
+
+    .icon-content :hover {
+        font-size: 120%;
+        transition: ease-in-out 0.5s;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 426px) {
+    .icon-content {
+        display: block;
+    }
+    .row {
+        margin-right: 10px;
+        margin-left: -30px;
+        marrgin: 0 auto;
+        /* margin: 0; */
+    }
+    .col-md-2 {
+        position: absolute;
+        z-index: 3;
+        height: auto;
+    }
+
+    .col-md-10 {
+        height: auto;
+    }
+
+    .thumbnail img {
+        margin: 0;
+        width: 179px;
+        height: 80px;
+    }
+
+    .thumbnail {
+        width: 125px;
+        float: right;
+        margin-left: 10px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .content {
+        width: 102%;
+        margin-top: -20px;
+        /* height: 640px; */
+        position: absolute;
+        z-index: 1;
+        top: 70px;
+        bottom: 0;
+    }
+
+    h1 {
+        /* padding-top: 10px; */
+    }
+
+    .main-footer {
+        width: 100%;
+        margin: 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .main-footer .left {
+        margin-left: 10px;
+    }
+
+    .icon-content {
+        font-size: 200%;
+        top: 90px;
+        left: 17px;
+        position: absolute;
+        z-index: 4;
+        cursor: pointer;
+        color: #222d32;
+    }
+
+    .icon-content-back {
+        font-size: 200%;
+        top: 0px;
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+        color: #ffffff;
+    }
+
+    .icon-content :hover {
+        font-size: 120%;
+        transition: ease-in-out 0.5s;
+    }
+
+}
+
+
+/*
+   REPONSIVE TABLET
+*/
+
+@media (min-width: 426px) and (max-width: 990px) {
+    .icon-content {
+        display: block;
+    }
+    .row {
+        margin-right: 5%;
+        margin-left: -30px;
+    }
+    .col-md-2 {
+        position: absolute;
+        z-index: 3;
+        /* height: 347px; */
+        height: auto;
+        width: 53%;
+    }
+
+    .col-md-10 {
+        height: auto;
+    }
+
+    .thumbnail img {
+        margin: 0;
+        width: 140px;
+        height: 94px;
+    }
+
+    .thumbnail {
+        width: 140px;
+        float: right;
+        margin-right: 20px;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .content {
+        width: 100%;
+        margin-top: -20px;
+        position: absolute;
+        z-index: 1;
+        top: 70px;
+        bottom: 0;
+    }
+
+    h1 {
+        /* padding-top: 10px; */
+    }
+
+    .main-footer {
+        width: 100%;
+        margin: 0;
+        /* margin-top: -20px; */
+        /* margin-left: 10px; */
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .icon-content {
+        font-size: 200%;
+        top: 90px;
+        left: 17px;
+        position: absolute;
+        z-index: 4;
+        cursor: pointer;
+        color: #222d32;
+    }
+
+    .icon-content-back {
+        font-size: 200%;
+        /* top: -395px; */
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+        color: #ffffff;
+    }
+
+    .icon-content :hover {
+        font-size: 120%;
+        transition: ease-in-out 0.5s;
+    }
+
+}
+
+/*
+  PEPONSIVE LAPTOP
+*/
+@media (min-width:990px) and (max-width: 1199px) {
+    .img-sidebar {
+        width: 45px;
+    }
+
+    .info p {
+        font-size: 11px;
+    }
+
+    .img-sidebar {
+        width: 42px;
+        border-radius: 50%;
+        margin: 13px 0 0 2px;
+    }
+
+    .sidebar-menu>li.header {
+        width: 125%;
+    }
+
+    .icon-content :hover {
+        font-size: 120%;
+        transition: ease-in-out 0.5s;
+    }
+
+    .col-md-3 {
+        width: 195px;
+    }
+
+    .col-md-2 {
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+    }
+
+    .col-md-2 i,
+    span {
+        font-size: 80%;
+    }
+
+    .col-md-10 {
+        height: auto;
+    }
+
+    .thumbnail img {
+
+        width: 100%;
+        height: 104px;
+    }
+
+    .thumbnail {
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+
+    .content {
+        width: 84.8%;
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+        z-index: 1;
+        margin-left: 15.2%;
+    }
+
+    .breadcrumb {
+        float: none;
+        margin-left: 64%;
+    }
+
+    .main-footer {
+        width: 100%;
+        margin: 0;
+        /* margin-top: -20px; */
+        position: absolute;
+        /* margin-left: 10px; */
+        bottom: 0;
+        /* margin-left: -35px; */
+        left: 0;
+    }
+}
+
+@media (min-width:1199px) and (max-width: 1440px) {
+    .img-sidebar {
+        width: 50px;
+    }
+
+    .info p {
+        font-size: 14px;
+    }
+
+    .img-sidebar {
+        width: 42px;
+        border-radius: 50%;
+        margin: 13px 0 0 2px;
+    }
+
+    .sidebar-menu>li.header {
+        width: 120%;
+    }
+
+    .icon-content :hover {
+        font-size: 120%;
+        transition: ease-in-out 0.5s;
+    }
+
+    .col-md-3 {
+        width: 255px;
+    }
+
+    .col-md-2 {
+        /* height: 691px; */
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+    }
+
+    .col-md-10 {
+        height: auto;
+    }
+
+    .thumbnail img {
+
+        width: 100%;
+        height: 135px;
+    }
+
+    .thumbnail {
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+
+    .content {
+        width: 84.8%;
+        /* height: 650px; */
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        top: 50px;
+        margin-left: 15.2%;
+    }
+
+    .breadcrumb {
+        float: none;
+        margin-left: 70%;
+    }
+
+    .main-footer {
+        width: 83.8%;
+        margin: 0;
+        margin-top: 0px;
+        /* margin-left: -35px; */
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@media (min-width:1440px) and (max-width: 1450px) {
+    .col-md-2 {
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+    }
+
+    .content {
+        width: 84.8%;
+        /* height: 650px; */
+        position: absolute;
+        z-index: 1;
+        top: 50px;
+        bottom: 0;
+        margin-left: 15.2%;
+    }
+
+    .main-footer {
+        width: 83.8%;
+        margin: 0;
+        margin-top: 0px;
+        margin-left: -35px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+
+}
+
+@media (min-width:1450px) {
+    .col-md-2 {
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+    }
+
+    .content {
+        width: 84.8%;
+        /* height: 650px; */
+        position: absolute;
+        z-index: 1;
+        top: 50px;
+        bottom: 0;
+        margin-left: 15.2%;
+    }
+
+    .main-footer {
+        width: 83.8%;
+        margin: 0;
+        margin-top: 0px;
+        /* margin-left: -65px; */
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+}
+@media (max-width: 990px){
+    .col-md-2 {
+        position: absolute;
+        z-index: 3;
+        /* height: 347px; */
+        height: auto;
+        width: 240px;
+        left: -240px;
+    }
+}

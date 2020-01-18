@@ -1,0 +1,920 @@
+/*
+  REPONSIVE css MOBILE
+*/
+
+@media (min-width:1199px) and (max-width: 1440px) {
+    .img-sidebar {
+        width: 50px;
+    }
+    .info p {
+        font-size: 14px;
+    }
+    .img-sidebar {
+        width: 42px;
+        border-radius: 50%;
+        margin: 13px 0 0 2px;
+    }
+    .sidebar-menu>li.header {
+        width: 120%;
+    }
+    .icon-content :hover {
+        font-size: 120%;
+        transition: ease-in-out 0.5s;
+    }
+    .col-md-3 {
+        width: 240px;
+    }
+    .col-md-2 {
+        /* height: 691px; */
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+    }
+    .col-md-10 {
+        height: auto;
+    }
+    .thumbnail img {
+        width: 100%;
+        height: 135px;
+    }
+    .thumbnail {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .content {
+        width: 84.8%;
+        /* height: 650px; */
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        top: 50px;
+        margin-left: 15.2%;
+    }
+    .breadcrumb {
+        float: none;
+        margin-left: 70%;
+    }
+    .main-footer {
+        width: 83.8%;
+        margin: 0;
+        margin-top: 0px;
+        /* margin-left: -35px; */
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@media (min-width:1440px) and (max-width: 1450px) {
+    .col-md-2 {
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+    }
+    .content {
+        width: 84.8%;
+        /* height: 650px; */
+        position: absolute;
+        z-index: 1;
+        top: 50px;
+        bottom: 0;
+        margin-left: 15.2%;
+    }
+    .main-footer {
+        width: 83.8%;
+        margin: 0;
+        margin-top: 0px;
+        margin-left: -35px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media (min-width:1450px) {
+    .col-md-2 {
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+    }
+    .content {
+        width: 84.8%;
+        /* height: 650px; */
+        position: absolute;
+        z-index: 1;
+        top: 50px;
+        bottom: 0;
+        margin-left: 15.2%;
+    }
+    .main-footer {
+        width: 83.8%;
+        margin: 0;
+        margin-top: 0px;
+        /* margin-left: -65px; */
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@media (max-width: 990px) {
+    .col-md-2 {
+        position: absolute;
+        z-index: 3;
+        /* height: 347px; */
+        height: auto;
+        width: 240px;
+        left: -240px;
+    }
+}
+@media (max-width:270px){
+    .thumbnail{width:100%;}
+    .content h2{
+        width: 120px;
+        font-size: 10px !important;
+        margin: 0 !important;
+    }
+}
+@media (max-width:320px) {
+    td.content_post p img {
+        width: 100px !important;
+        height: 55px !important;
+    }
+    h1 {
+        /* padding-top: 10px; */
+        margin-top: 5px;
+        font-size: 21px;
+    }
+    h3 {
+        font-size: 16px
+    }
+    .content h2{
+        width: 130px;
+        font-size: 10px !important;
+        margin-top: 0 !important;
+    }
+    .content img{width: 55px !important;}
+    input#seach_member {
+        width: 100px;
+        /*! float: right; */
+    }
+    .ckeditor input[type="title"], select {
+        height: 23px;
+        border: 1px solid #7f8c8d;
+    }
+    textarea {
+        width: 100%;
+    }
+    *, .ckeditor h2, .ckeditor button {
+        font-size: 94%;
+    }
+    .breadcrumb {
+        margin-right: 0;
+        ;
+        font-size: 93%;
+        margin-bottom: 0;
+    }
+    .content-header h1, .row h1 {
+        font-size: 15px;
+    }
+    .txt h3 {
+        font-size: 13px;
+    }
+    .row {
+        /*! margin-right: 15px; */
+        /*! margin-left: -30px; */
+    }
+    .icon-content {
+        display: block;
+    }
+    .col-md-2 {
+        position: absolute;
+        z-index: 3;
+        height: auto;
+    }
+    .col-md-10 {
+        height: auto;
+    }
+    .thumbnail img {
+        margin: 0;
+        width: 106px !important;
+        height: 70px;
+    }
+    .thumbnail {
+        width: 43%;
+        float: right;
+        margin-left: 10px;
+        position: relative;
+        z-index: 1;
+    }
+    .content {
+        width: 100%;
+        margin-top: -20px;
+        position: relative;
+        z-index: 1;
+        /* overflow: hidden; */
+        position: absolute;
+        top: 70px;
+        bottom: 0;
+    }
+    h1 {
+        /* padding-top: 10px; */
+    }
+    .main-footer {
+        width: 100%;
+        margin: 0;
+        /* margin-top: -14px; */
+        /* margin-left: 7px; */
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 30px;
+    }
+    .info p {
+        font-size: 11px;
+    }
+    .img-sidebar {
+        width: 43px;
+        margin: 14px 0 0 10px;
+    }
+    .icon-content {
+        font-size: 130%;
+        top: 90px;
+        left: 17px;
+        position: absolute;
+        z-index: 4;
+        cursor: pointer;
+        color: #222d32;
+    }
+    .icon-content-back {
+        font-size: 200%;
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+        color: #ffffff;
+    }
+    .icon-content :hover {
+        font-size: 120%;
+        transition: ease-in-out 0.5s;
+    }
+    .name img {
+        width: 80%;
+        margin-left: 3px;
+    }
+    p.gender input {
+        width: 7%;
+        height: 7px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 348px) {
+    td.content_post p img {
+        width: 200px !important;
+        height: 90px !important;
+    }
+    h1 {
+        /* padding-top: 10px; */
+        margin-top: 5px;
+        font-size: 21px;
+    }
+    h3 {
+        font-size: 16px
+    }
+    .table img {
+        width: 60px !important;
+        height: 40px !important;
+    }
+    .conetnt h2,.content{font-size: 80%;}
+    .table-content h2{font-size: 12px !important;width: 160px;margin-top: 0 !important;}
+    input#seach_member {
+        width: 100px;
+        /*! float: right; */
+    }
+    p.gender input {
+        width: 10%;
+        height: 15px;
+    }
+    .ckeditor input[type="title"], select {
+        height: 23px;
+        border: 1px solid #7f8c8d;
+    }
+    textarea {
+        width: 100%;
+    }
+    *, .ckeditor h2, .ckeditor button {
+        font-size: 94%;
+    }
+    .breadcrumb {
+        margin-right: 0;
+        ;
+        font-size: 93%;
+    }
+    .content-header h1, .row h1 {
+        font-size: 15px;
+    }
+    .txt h3 {
+        font-size: 13px;
+    }
+    .row {}
+    .icon-content {
+        display: block;
+    }
+    .col-md-2 {
+        position: absolute;
+        z-index: 3;
+        height: auto;
+    }
+    .col-md-10 {
+        height: auto;
+    }
+    .thumbnail img {
+        margin: 0;
+        /* width: 90px; */
+        /* height: 70px; */
+    }
+    .thumbnail {
+        width: 46%;
+        float: right;
+        margin-left: 10px;
+        position: relative;
+        z-index: 1;
+    }
+    .content {
+        width: 100%;
+        margin-top: -20px;
+        position: relative;
+        z-index: 1;
+        /* overflow: hidden; */
+        position: absolute;
+        top: 70px;
+        bottom: 0;
+    }
+    h1 {
+        /* padding-top: 10px; */
+    }
+    .main-footer {
+        width: 100%;
+        margin: 0;
+        /* margin-top: -14px; */
+        /* margin-left: 7px; */
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 30px;
+    }
+    .info p {
+        font-size: 11px;
+    }
+    .img-sidebar {
+        width: 43px;
+        margin: 14px 0 0 10px;
+    }
+    .icon-content {
+        font-size: 160%;
+        top: 90px;
+        left: 17px;
+        position: absolute;
+        z-index: 4;
+        cursor: pointer;
+        color: #222d32;
+    }
+    .icon-content-back {
+        font-size: 200%;
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+        color: #ffffff;
+    }
+    .icon-content :hover {
+        font-size: 120%;
+        transition: ease-in-out 0.5s;
+    }
+}
+
+@media (min-width: 348px) and (max-width: 376px) {
+    td.content_post p img {
+        width: 155px !important;
+        height: 80px !important;
+    }
+    h1 {
+        /* padding-top: 10px; */
+        margin-top: 5px;
+        font-size: 21px;
+    }
+    h3 {
+        font-size: 16px
+    }
+    .table img {
+        width: 50px !important;
+        height: 40px !important;
+    }
+    .table-content h2{font-size: 12px !important;width: 160px;margin-top: 0 !important;}
+    .conetnt h2,.content{font-size: 80%;}
+    input#seach_member {
+        width: 124px;
+        /*! float: right; */
+    }
+    p.gender input {
+        width: 5%;
+        height: 10px;
+    }
+    .ckeditor input[type="title"], select {
+        height: 27px;
+    }
+    textarea {
+        width: 100%;
+    }
+    *, .ckeditor h2, .ckeditor button {
+        font-size: 97%;
+    }
+    .breadcrumb {
+        margin-right: 0;
+        ;
+        font-size: 95%;
+    }
+    .content-header h1, .row h1 {
+        font-size: 21px;
+    }
+    .txt h3 {
+        font-size: 13px;
+    }
+    .row {
+        margin-right: -15px;
+        margin-left: -30px;
+    }
+    .icon-content {
+        display: block;
+    }
+    .col-md-2 {
+        position: absolute;
+        z-index: 3;
+        height: auto;
+    }
+    .col-md-10 {
+        height: auto;
+    }
+    .thumbnail img {
+        margin: 0;
+    }
+    .thumbnail {
+        width: 46%;
+        float: right;
+        margin-left: 10px;
+        position: relative;
+        z-index: 1;
+    }
+    .content {
+        width: 102%;
+        margin-top: -20px;
+        position: relative;
+        z-index: 1;
+        /* overflow: hidden; */
+        position: absolute;
+        top: 70px;
+        bottom: 0;
+    }
+    h1 {
+        /* padding-top: 10px; */
+        margin-top: 5px;
+        font-size: 21px;
+    }
+    h3 {
+        font-size: 16px
+    }
+    .main-footer {
+        width: 100%;
+        margin: 0;
+        /* margin-top: -14px; */
+        /* margin-left: 7px; */
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 30px;
+    }
+    .info p {
+        font-size: 11px;
+    }
+    .img-sidebar {
+        width: 43px;
+        margin: 14px 0 0 10px;
+    }
+    .icon-content {
+        font-size: 150%;
+        top: 100px;
+        left: 17px;
+        position: absolute;
+        z-index: 4;
+        cursor: pointer;
+        color: #222d32;
+    }
+    .icon-content-back {
+        font-size: 200%;
+        top: 0px;
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+        color: #ffffff;
+    }
+    .icon-content :hover {
+        font-size: 120%;
+        transition: ease-in-out 0.5s;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 426px) {
+    td.content_post p img {
+        width: 200px !important;
+        height: 90px !important;
+    }
+    h1 {
+        /* padding-top: 10px; */
+        margin-top: 5px;
+        font-size: 21px;
+    }
+    h3 {
+        font-size: 16px
+    }
+    .table img {
+        width: 65px !important;
+        height: 40px !important;
+    }
+    .table-content h2{font-size: 12px !important;width: 165px;}
+    .conetnt h2,.content{font-size: 80%;}
+    input#seach_member {
+        width: 116px;
+        /*! float: right; */
+    }
+    p.gender input {
+        width: 6%;
+        height: 10px;
+    }
+    .ckeditor input[type="title"], select {
+        height: 26px;
+    }
+    textarea {
+        width: 100%;
+    }
+    *, .ckeditor h2, .ckeditor button {
+        font-size: 96%;
+    }
+    .breadcrumb {
+        margin-right: 0;
+        ;
+        font-size: 94%;
+    }
+    .content-header h1, .row h1 {
+        font-size: 19px;
+    }
+    .txt h3 {
+        font-size: 13px;
+    }
+    .icon-content {
+        display: block;
+    }
+    .row {
+        /* margin-right: 17%; */
+        margin-left: -30px;
+        marrgin: 0 auto;
+        /* margin: 0; */
+    }
+    .col-md-2 {
+        position: absolute;
+        z-index: 3;
+        height: auto;
+    }
+    .col-md-10 {
+        height: auto;
+    }
+    .thumbnail img {
+        margin: 0;
+        /* width: 179px; */
+        /* height: 80px; */
+    }
+    .thumbnail {
+        width: 45%;
+        float: right;
+        margin-left: 10px;
+        position: relative;
+        z-index: 1;
+    }
+    .content {
+        width: 100%;
+        margin-top: -20px;
+        /* height: 640px; */
+        position: absolute;
+        z-index: 1;
+        top: 70px;
+        bottom: 0;
+    }
+    h1 {
+        /* padding-top: 10px; */
+    }
+    .main-footer {
+        width: 100%;
+        margin: 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .main-footer .left {
+        margin-left: 10px;
+    }
+    .icon-content {
+        font-size: 155%;
+        top: 100px;
+        left: 17px;
+        position: absolute;
+        z-index: 4;
+        cursor: pointer;
+        color: #222d32;
+    }
+    .icon-content-back {
+        font-size: 200%;
+        top: 0px;
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+        color: #ffffff;
+    }
+    .icon-content :hover {
+        font-size: 120%;
+        transition: ease-in-out 0.5s;
+    }
+}
+
+/*
+   REPONSIVE TABLET
+*/
+
+@media (min-width: 426px) and (max-width: 990px) {
+    td.content_post p img {
+        width: 230px !important;
+        height: 100px !important;
+    }
+    .table img {
+        width: 75px !important;
+        height: 50px !important;
+    }
+    .table-content h2{font-size: 15px;}
+    .content h2{font-size: 13px !important;width: 390px;margin-top: 0 !important;}
+    p.gender input {
+        width: 3%;
+        height: 12px;
+    }
+    .ckeditor input[type="title"], select {
+        height: 29px;
+    }
+    textarea {
+        width: 100%;
+    }
+    *, .ckeditor h2, .ckeditor button {
+        font-size: 99%;
+    }
+    .breadcrumb {
+        margin-right: 0;
+        ;
+        font-size: 98%;
+    }
+    .content-header h1, .row h1 {
+        font-size: 24px;
+    }
+    .icon-content {
+        display: block;
+    }
+    .row {
+        /*! margin-left: -30px; */
+    }
+    .col-md-2 {
+        position: absolute;
+        z-index: 3;
+        /* height: 347px; */
+        height: auto;
+        /*! width: 53%; */
+    }
+    .col-md-10 {
+        height: auto;
+    }
+    .thumbnail img {
+        margin: 0;
+        width: 165px;
+        height: 105px;
+    }
+    .thumbnail {
+        width: 165px;
+        float: right;
+        margin-right: 20px;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 1;
+    }
+    .content {
+        width: 100%;
+        margin-top: -20px;
+        position: absolute;
+        z-index: 1;
+        top: 70px;
+        bottom: 0;
+        font-size: 11px !important;
+    }
+    h1 {
+        /* padding-top: 10px; */
+    }
+    .main-footer {
+        width: 100%;
+        margin: 0;
+        /* margin-top: -20px; */
+        /* margin-left: 10px; */
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .icon-content {
+        font-size: 160%;
+        top: 100px;
+        left: 17px;
+        position: absolute;
+        z-index: 4;
+        cursor: pointer;
+        color: #222d32;
+    }
+    .icon-content-back {
+        font-size: 200%;
+        /* top: -395px; */
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+        color: #ffffff;
+    }
+    .icon-content :hover {
+        font-size: 120%;
+        transition: ease-in-out 0.5s;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 550px) {
+    .col-md-3 {
+        width: 50%;
+        float: left;
+    }
+    .container {
+        /*! padding-left: 10%; */
+    }
+    .thumbnail {
+        /*! width: 85px; */
+    }
+    .thumbnail img {
+        /*! height: 70px; */
+    }
+    .txt h3 {
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 650px) {
+    .col-md-3 {
+        width: 33.33%;
+        float: left;
+    }
+    .container {
+        /*! padding-left: 10%; */
+    }
+    .thumbnail {
+        width: 130px;
+    }
+    .thumbnail img {
+        height: 90px;
+    }
+    .txt h3 {
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 750px) {
+    .col-md-3 {
+        width: 33.33%;
+        float: left;
+    }
+    .container {
+        /*! padding-left: 10%; */
+    }
+    .thumbnail {
+        /*! width: 85px; */
+    }
+    .thumbnail img {
+        /*! height: 70px; */
+    }
+    .txt h3 {
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 850px) {
+    .col-md-3 {
+        width: 33.33%;
+        float: left;
+    }
+    .container {
+        /*! padding-left: 10%; */
+    }
+    .thumbnail {
+        /*! width: 85px; */
+    }
+    .thumbnail img {
+        /*! height: 70px; */
+    }
+    .txt h3 {
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 850px) and (max-width: 990px) {
+    .col-md-3 {
+        width: 25%;
+        float: left;
+    }
+    .container {
+        /*! padding-left: 5%; */
+    }
+    .thumbnail {
+        /*! width: 85px; */
+    }
+    .thumbnail img {
+        /*! height: 70px; */
+    }
+    .txt h3 {
+        font-size: 23px;
+    }
+}
+
+/*
+  PEPONSIVE LAPTOP
+*/
+
+@media (min-width:990px) and (max-width: 1199px) {
+    .img-sidebar {
+        width: 45px;
+    }
+    .info p {
+        font-size: 11px;
+    }
+    .img-sidebar {
+        width: 42px;
+        border-radius: 50%;
+        margin: 13px 0 0 2px;
+    }
+    .sidebar-menu>li.header {
+        width: 125%;
+    }
+    .icon-content :hover {
+        font-size: 120%;
+        transition: ease-in-out 0.5s;
+    }
+    .col-md-3 {
+        width: 201px;
+    }
+    .col-md-2 {
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+    }
+    .col-md-2 i, span {
+        font-size: 80%;
+    }
+    .col-md-10 {
+        height: auto;
+    }
+    .thumbnail img {
+        width: 100%;
+        height: 104px;
+    }
+    .thumbnail {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .content {
+        width: 84.8%;
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+        z-index: 1;
+        margin-left: 15.2%;
+    }
+    .breadcrumb {
+        float: none;
+        margin-left: 64%;
+    }
+    .main-footer {
+        width: 100%;
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+@media (min-width:990px) {
+    .icon-content, .icon-content-back{
+        display: none;
+    }
+}

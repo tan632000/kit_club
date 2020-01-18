@@ -1,0 +1,98 @@
+<script type="text/javascript">
+    $(document).ready(()=>{
+      $('#submit_kit').unbind().bind('click' , login);
+    });
+    
+    function login(){
+      $("#idForm_kit").submit(function(e) {
+        e.preventDefault(); 
+        // var form = $(this);
+        var username = $('#username').val();
+        var password = $('#password').val();
+        $.ajax({
+           type: "POST",
+           //url: "./app/models/login.php",
+           url: "conn/index.php",
+           data: {username : username , password : password}, // serializes the form's elements.
+           success: function(result){
+              if(result == 'admin'){ 
+                window.location="../kit_club/admin.php";
+              }
+
+              else if(result == 'member'){
+                window.location = "./index.php?url=user/index"
+              }
+              else{
+                let content_error = document.getElementById('content_error');
+                content_error.innerHTML = "Username or Password error !";
+                content_error.style.display = 'block';
+              }
+           }
+        });
+      }); 
+    }
+</script>
+
+
+<script>
+    $(document).on("click","#submit_kit",function() {
+          var username = $('#username').val();
+          var password = $('#password').val();
+   
+
+          $.ajax({
+           type: "POST",
+           //url: "./app/models/login.php",
+           url: "conn/index.php",
+           data: {username : username , password : password}, // serializes the form's elements.
+           success: function(result){
+              if(result == 'admin'){ 
+                window.location="../kit_club/admin.php";
+              }
+
+              else if(result == 'member'){
+                window.location = "./index.php?url=user/index"
+              }
+              else{
+                let content_error = document.getElementById('content_error');
+                content_error.innerHTML = "Username or Password error !";
+                content_error.style.display = 'block';
+              }
+           }
+        });
+    
+});
+</script>
+
+
+<div class="modal fade" id="modal-id">
+    <div class="modal-body">
+        <div class="container">
+            <div class="form_content" align="center">
+                <h2>Đăng nhập nếu bạn là thành viên</h2>
+                <h1 id="kitclub">CLB KIT !</h1>
+
+            </div>
+            <!-- <div class="login_form">
+                <h1 align="center">Đăng nhập</h1>
+                <form action="">
+                    <input type="text" name="" required="" placeholder="Tài khoản">
+                    <input type="password" name="" required="" placeholder="Mật khẩu">
+                    <input type="submit" name="" value="Đăng nhập">
+                </form>
+                <a data-toggle="modal" href='#modal-pass'>Quên mật khẩu</a>
+            </div> -->
+            <div class="login_form">
+                <h1 align="center">Đăng nhập</h1>
+                <div id="idForm_kit">
+                    <input type="text" name="username" id="username" required="" placeholder="Tài khoản">
+                    <input type="password" name="password" id="password" required="" placeholder="Mật khẩu">
+                    <input type="submit" name="submit" id="submit_kit" value="Đăng nhập">
+                </div>
+                <a data-toggle="modal" href='#modal-pass'>Quên mật khẩu</a>
+                <div id="content_error" class="alert alert-danger" style="display: none; margin-top: 20px;"></div> 
+            </div>
+        </div>
+
+    </div>
+</div>

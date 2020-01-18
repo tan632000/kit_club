@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <style type="text/css">
+    .icon{
+        font-size: 10px;
+    }
+    .block{
+        display: flex;
+    }
+
+</style>
+    <script type="text/javascript">
+        function logout(){
+            $.ajax({
+                url : '../../calender/action/delete_cookie.php',
+                type : 'GET',
+                cache: false,
+                success: function(data){
+                    window.location="/kit_club";
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="container col-md-7 col-lg-5 mt-5">
+    <div class="block">
+        <div class="card">       
+        <h3 class="card-header" id="monthAndYear"></h3>       
+        <table class="table table-bordered table-responsive-sm" id="calendar">
+            <thead>
+            <tr>
+                <th>Chủ nhật</th>
+                <th>Thứ 2</th>
+                <th>Thứ 3</th>
+                <th>Thứ 4</th>
+                <th>Thứ 5</th>
+                <th>Thứ 6</th>
+                <th>Thứ 7</th>
+            </tr>
+            </thead>
+
+            <tbody id="calendar-body">
+
+            </tbody>
+        </table>
+
+        <div class="form-inline">
+
+            <button class="btn btn-outline-primary col-sm-6" id="previous" onclick="previous()">Tháng trước</button>
+
+            <button class="btn btn-outline-primary col-sm-6" id="next" onclick="next()">Tháng sau</button>
+        </div>
+        <br/>
+        <form class="form-inline">
+            <label class="lead mr-2 ml-2" for="month">Tìm tới: </label>
+            <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
+                <option value=0>Tháng 1</option>
+                <option value=1>Tháng 2</option>
+                <option value=2>Tháng 3</option>
+                <option value=3>Tháng 4</option>
+                <option value=4>Tháng 5</option>
+                <option value=5>Tháng 6</option>
+                <option value=6>Tháng 7</option>
+                <option value=7>Tháng 8</option>
+                <option value=8>Tháng 9</option>
+                <option value=9>Tháng 10</option>
+                <option value=10>Tháng 11</option>
+                <option value=11>Tháng 12</option>
+            </select>
+
+
+            <label for="year"></label><select class="form-control col-sm-4" name="year" id="year" onchange="jump()">
+            
+            <option value=2019>2019</option>
+            <option value=2020>2020</option>
+            <option value=2021>2021</option>
+        </select></form>
+    </div>
+    </div>
+    
+    <div id="demo"></div>
+    <div>
+        <button class="btn btn-outline-primary logout" onclick="logout();">Đăng xuất</button>
+    </div>
+</div>
+    
+<!--<button name="jump" onclick="jump()">Go</button>-->
+<script src="../../calender/js/scripts.js"></script>
+
+<!-- Optional JavaScript for bootstrap -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        crossorigin="anonymous"></script>
+
+
+</body>
+</html>

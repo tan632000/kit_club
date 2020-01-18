@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<HTML>
+
+<head>
+    <title>KIT-CLUB</title>
+    <meta charset='utf-8' />
+    <meta content='width=device-width, initial-scale=1' name='viewport' />
+    <!-- icon -->
+    <link rel="stylesheet" type="text/css" href="icon./all.css">
+    <!--JQUERY-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!--wow.js-->
+    <script src="js/wow.js"></script>
+    <!--alimate.css-->
+    <link rel="stylesheet" href="css/alimate.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <script>
+        $(document).ready(function() {
+                new WOW().init();
+                $(".menu_dropdown li").hover(function() {
+                    $(this).find("ul:first").slideDown(500);
+                }, function() {
+                    $(this).find("ul:first").hide(300);
+                })
+            })
+            // Side Menu
+        $(function() {
+                $("#cssmenu ul ul li:odd").addClass("odd"), $("#cssmenu ul ul li:even").addClass("even"), $("#cssmenu > ul > li > a").click(function() {
+                    $("#cssmenu li").removeClass("active"), $(this).closest("li").addClass("active");
+                    var s = $(this).next();
+                    return s.is("ul") && s.is(":visible") && ($(this).closest("li").removeClass("active"), s.slideUp("normal")), s.is("ul") && !s.is(":visible") && ($("#cssmenu ul ul:visible").slideUp("normal"), s.slideDown("normal")), 0 == $(this).closest("li").find("ul").children().length
+                });
+            })
+            // Menu
+        $(function() {
+            $("#pull-right").click(function() {
+                $("#css-menu").css({
+                    right: "0"
+                })
+            }), $(".close-menu").click(function() {
+                $("#css-menu").css({
+                    right: "-150px"
+                })
+            })
+        });
+
+        // Side Menu-pc
+        $(function() {
+                $("#cssmenupc ul ul li:odd").addClass("odd"), $("#cssmenupc ul ul li:even").addClass("even"), $("#cssmenupc > ul > li > a").click(function() {
+                    $("#cssmenupc li").removeClass("active"), $(this).closest("li").addClass("active");
+                    var s = $(this).next();
+                    return s.is("ul") && s.is(":visible") && ($(this).closest("li").removeClass("active"), s.slideUp("normal")), s.is("ul") && !s.is(":visible") && ($("#cssmenupc ul ul:visible").slideUp("normal"), s.slideDown("normal")), 0 == $(this).closest("li").find("ul").children().length
+                });
+            })
+            // Menu-pc
+        $(function() {
+            $(".menu").click(function() {
+                $("#css-menu-pc").css({
+                    right: "0"
+                })
+            }), $(".close-menu").click(function() {
+                $("#css-menu-pc").css({
+                    right: "-200px"
+                })
+            })
+        });
+        // SHOW-POSTS
+        $(function(){
+            $(".post a").click(function(){
+                $(".date-posts").css({
+                    display: "none"
+                })
+                $(".show-post").css({
+                    display: "block"
+                })
+            })
+        })
+        // HIDE-POST
+        $(function(){
+            $(".icon-home span a").click(function(){
+                $(".date-posts").css({
+                    display: "block"
+                })
+                $(".show-post").css({
+                    display: "none"
+                })
+            })
+        })
+    </script>
+</head>
+
+<body class='index'>
+    <!--MAIN HEADER-->
+    <div class="main-header">
+        <div class='header-wrapper'>
+            <div class='header section' id='header'>
+                <div class='widget Header' data-version='1' id='Header1'>
+                    <div id='header-inner'>
+                        <h1><img alt='KIT' id='Header1_headerimg' src="img./logo.png" style='display: block' /></h1>
+                    </div>
+                </div>
+            </div>
+            <div class='navigation section' id='navigation'>
+                <div class='widget HTML' data-version='1' id='HTML99'>
+                    <nav class='main-nav'>
+                        <ul class="menu_dropdown">
+                            <li><a href='#'>Tin tức</a>
+                                <ul>
+                                    <li><a href="#">Tin công nghệ</a></li>
+                                    <li><a href="#">Chuyện đời IT</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='#'>Sản phẩm</a>
+                                <ul>
+                                    <li><a href="#">Team Web</a></li>
+                                    <li><a href="#">Team Mobile</a></li>
+                                    <li><a href="#">Team Arduino</a></li>
+                                </ul>
+                            </li>
+                            <li><a href='#'>Khóa học</a>
+                                <ul>
+                                    <li><a href="#">Khóa học C</a></li>
+                                    <li><a href="#">Khóa học Java</a></li>
+                                </ul>
+                            </li>
+                            <li><a data-toggle="modal" href='#modal-id'>Đăng nhập</a></li>
+                            <li class='searchbutton' title="Seach"><i class="fa fa-search "></i></li>
+                            <li class='menu' title='Menu'><i class="fa fa-bars "></i></li>
+                        </ul>
+                        <a href='#' id='pull'>Menu</a>
+                        <a href="#" id="pull-right"><i class="fas fa-bars"></i></a>
+                    </nav>
+                    <div id='css-menu'>
+                        <div id='cssmenu'>
+                            <ul>
+                                <li class='home'><span class='close-menu' title='Close'><i aria-hidden='true' class='fa fa-times-circle'></i></span></li>
+                                <li class='has-sub'>
+                                    <a href='#'><span>Tin tức</span></a>
+                                    <ul class='expand'>
+                                        <li><a href='#'>Tin công nghệ </a></li>
+
+                                        <li class='last'><a href='#'>Chuyện đời IT</a></li>
+                                    </ul>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'><span>Sản phẩm</span></a>
+                                    <ul class='expand'>
+                                        <li><a href='#'>Team Web</a></li>
+                                        <li><a href='#'>Team Mobile</a></li>
+                                        <li class='last'><a href='#'>Team Arduino</a></li>
+                                    </ul>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href='#'><span>Khóa học</span></a>
+                                    <ul class='expand'>
+                                        <li><a href='#'>Khóa học C07</a></li>
+                                        <li><a href='#'>Khóa học C08</a></li>
+                                        <li><a href='#'>Khóa học Java01</a></li>
+                                        <li class='last'><a href='#'>Khóa học Java02</a></li>
+                                    </ul>
+                                </li>
+                                <li class='has-sub'>
+                                    <a href="#">Thời khóa biểu</a>
+                                    <ul class='expand'>
+                                        <li><a data-toggle="modal" href='#modal-id-tkb' title='Đăng nhập tài khoản sinh viên'><span>Đăng nhập tài khoản SV</span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="modal" href='#modal-id-mobile' title='Đăng nhập'><span>Đăng nhập</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id='css-menu-pc'>
+                        <div id='cssmenupc'>
+                            <ul>
+                                <li class='home'><span class='close-menu' title='Close'><i aria-hidden='true' class='fa fa-times-circle'></i></span></li>
+                                <li class='has-sub'>
+                                    <a href='#'><span>Thời khóa biểu</span></a>
+                                    <ul class='expand'>
+                                        <li><a data-toggle="modal" href='#modal-id-tkb-pc' title='Đăng nhập tài khoản sinh viên'><span>Đăng nhập tài khoản SV</span></a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='clear'></div>
+
+    <!--Thanh giới thiệu-->
+    <div class='hero' id='hero1'>
+        <div class='inner1'>
+            <div class="hero1">
+                <!-- EFFECT SNOWS -->
+                <div class="snow">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMax slice">
+                        <g fill="#FFF" fill-opacity=".15" transform="translate(55 42)">
+                            <g id="snow-bottom-layer">
+                                <ellipse cx="6" cy="1009.5" rx="6" ry="5.5" />
+                                <ellipse cx="138" cy="1110.5" rx="6" ry="5.5" />
+                                <ellipse cx="398" cy="1055.5" rx="6" ry="5.5" />
+                                <ellipse cx="719" cy="1284.5" rx="6" ry="5.5" />
+                                <ellipse cx="760" cy="1155.5" rx="6" ry="5.5" />
+                                <ellipse cx="635" cy="1459.5" rx="6" ry="5.5" />
+                                <ellipse cx="478" cy="1335.5" rx="6" ry="5.5" />
+                                <ellipse cx="322" cy="1414.5" rx="6" ry="5.5" />
+                                <ellipse cx="247" cy="1234.5" rx="6" ry="5.5" />
+                                <ellipse cx="154" cy="1425.5" rx="6" ry="5.5" />
+                                <ellipse cx="731" cy="773.5" rx="6" ry="5.5" />
+                                <ellipse cx="599" cy="874.5" rx="6" ry="5.5" />
+                                <ellipse cx="339" cy="819.5" rx="6" ry="5.5" />
+                                <ellipse cx="239" cy="1004.5" rx="6" ry="5.5" />
+                                <ellipse cx="113" cy="863.5" rx="6" ry="5.5" />
+                                <ellipse cx="102" cy="1223.5" rx="6" ry="5.5" />
+                                <ellipse cx="395" cy="1155.5" rx="6" ry="5.5" />
+                                <ellipse cx="826" cy="943.5" rx="6" ry="5.5" />
+                                <ellipse cx="626" cy="1054.5" rx="6" ry="5.5" />
+                                <ellipse cx="887" cy="1366.5" rx="6" ry="5.5" />
+                                <ellipse cx="6" cy="241.5" rx="6" ry="5.5" />
+                                <ellipse cx="138" cy="342.5" rx="6" ry="5.5" />
+                                <ellipse cx="398" cy="287.5" rx="6" ry="5.5" />
+                                <ellipse cx="719" cy="516.5" rx="6" ry="5.5" />
+                                <ellipse cx="760" cy="387.5" rx="6" ry="5.5" />
+                                <ellipse cx="635" cy="691.5" rx="6" ry="5.5" />
+                                <ellipse cx="478" cy="567.5" rx="6" ry="5.5" />
+                                <ellipse cx="322" cy="646.5" rx="6" ry="5.5" />
+                                <ellipse cx="247" cy="466.5" rx="6" ry="5.5" />
+                                <ellipse cx="154" cy="657.5" rx="6" ry="5.5" />
+                                <ellipse cx="731" cy="5.5" rx="6" ry="5.5" />
+                                <ellipse cx="599" cy="106.5" rx="6" ry="5.5" />
+                                <ellipse cx="339" cy="51.5" rx="6" ry="5.5" />
+                                <ellipse cx="239" cy="236.5" rx="6" ry="5.5" />
+                                <ellipse cx="113" cy="95.5" rx="6" ry="5.5" />
+                                <ellipse cx="102" cy="455.5" rx="6" ry="5.5" />
+                                <ellipse cx="395" cy="387.5" rx="6" ry="5.5" />
+                                <ellipse cx="826" cy="175.5" rx="6" ry="5.5" />
+                                <ellipse cx="626" cy="286.5" rx="6" ry="5.5" />
+                                <ellipse cx="887" cy="598.5" rx="6" ry="5.5" />
+                            </g>
+                        </g>
+                        <g fill="#FFF" fill-opacity=".3" transform="translate(65 63)">
+                            <g id="snow-top-layer">
+                                <circle cx="8" cy="776" r="8" />
+                                <circle cx="189" cy="925" r="8" />
+                                <circle cx="548" cy="844" r="8" />
+                                <circle cx="685" cy="1115" r="8" />
+                                <circle cx="858" cy="909" r="8" />
+                                <circle cx="874" cy="1438" r="8" transform="rotate(180 874 1438)" />
+                                <circle cx="657" cy="1256" r="8" transform="rotate(180 657 1256)" />
+                                <circle cx="443" cy="1372" r="8" transform="rotate(180 443 1372)" />
+                                <circle cx="339" cy="1107" r="8" transform="rotate(180 339 1107)" />
+                                <circle cx="24" cy="1305" r="8" transform="rotate(180 24 1305)" />
+                                <circle cx="8" cy="8" r="8" />
+                                <circle cx="189" cy="157" r="8" />
+                                <circle cx="548" cy="76" r="8" />
+                                <circle cx="685" cy="347" r="8" />
+                                <circle cx="858" cy="141" r="8" />
+                                <circle cx="874" cy="670" r="8" transform="rotate(180 874 670)" />
+                                <circle cx="657" cy="488" r="8" transform="rotate(180 657 488)" />
+                                <circle cx="443" cy="604" r="8" transform="rotate(180 443 604)" />
+                                <circle cx="339" cy="339" r="8" transform="rotate(180 339 339)" />
+                                <circle cx="24" cy="537" r="8" transform="rotate(180 24 537)" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <!---->
+            <div class='copyv'>
+                <div>
+                    <h3 class="wow bounceInDown">Chào mừng bạn đến với KIT!</h3>
+                </div>
+                <div id='mariber-social'>
+                    <ul>
+                        <li class='fb-item'>
+                            <a href='#' rel='nofollow noopener' target='' title='Follow Us on Facebook' class="wow bounceInLeft"><i class='fab fa-facebook-square' style="cursor: pointer;"></i></span></a>
+                        </li>
+                        <li class='instagram-item'>
+                            <a href='#' rel='nofollow noopener' target='' title='Follow Us on Instagram' class="wow bounceInLeft"><i class='fab fa-instagram'></i></a>
+                        </li>
+                        <li class='youtube-item'>
+                            <a href='#' rel='nofollow noopener' target='' title='Follow Us on Youtube' class="wow wobble"><i class='fab fa-youtube-square'></i></a>
+                        </li>
+                        <li class="email-item">
+                            <a href="#" rel="nofollow noopener" target='' title='Follow Us on Email' class="wow bounceInRight"><i class="fas fa-envelope-square"></i></a>
+                        </li>
+                        <li class="googlemap-item">
+                            <a href="#" rel="nofollow noopener" target='' title='Follow Us on Map' class="wow bounceInRight"><i class="fas fa-globe-americas"></i></a>
+                        </li>
+
+                        <!--EFFECT SPINER-->
+                        <div>
+                            <div class="spiner">
+                            </div>
+                            <div class="bar">
+                                <span class="dot1"></span>
+                                <span class="dot2"></span>
+                                <span class="dot3"></span>
+                            </div>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='clear'></div>
+
+    <!--CONTENT -->
+    <div id='wrapper'>
+        <div id='sider'>
+            <div id='left-aside'>
+                <div id='artikel'>
+                    <div class='main section' id='main'>
+                        <div class='widget Blog' id='Blog1'>
+                            <div class='blog-posts hfeed'>
+                                <div class="date-outer">
+                                    <div class="date-posts">
+                                        <!-- content 1-->
+                                        <div class='post-outer wow bounceInLeft' data-wow-delay='0.1s'>
+                                            <article class='post hentry'>
+                                                <a href='#'>
+                                                    <div class='img-thumbnail'>
+                                                        <span class='overlay'>
+                                                            <div CLASS='info-wrapper'>Xem chi tiết</div>
+                                                        </span>
+                                                        <img src="https://www.uit.edu.vn/sites/vi/files/uploads/images/201910/d226y-l224-chiec-smartphone-hu-2661-1720-1570333631.jpg">
+                                                    </div>
+                                                    <h2 class='post-title entry-title'>
+                                                        <a href='#' title='Google phát hiện lỗ hổng bảo mật trên một loạt smartphone' class="wow bounce" data-wow-delay="0.5s">Google phát hiện lỗ hổng bảo mật trên một loạt smartphone</a>
+                                                    </h2>
+                                                    <div class='post-body'>
+                                                        <div>
+                                                            Nhiều mẫu Android của Samsung, Xiaomi, Huawei và cả Google xuất hiện trở lại một....
+                                                        </div>
+                                                    </div>
+                                                    <div class='aishare'>
+                                                        <ul>
+                                                            <li><a class='lyco-facebook' href='https://www.facebook.com/sharer.php?u=http://abc.com.html' rel='nofollow noopener' target='_blank'><i class='fab fa-facebook-f'></i><span class='inv'></span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class='post-info'>
+                                                        <span class='author-info'>
+                                                            <i class='fa fa-user'></i>
+                                                            <span class='vcard'>
+                                                                <span class='fn'>
+                                                                    <a class='g-profile' href='#' rel='author' title='author profile'>
+                                                                        <span>Trường Giang</span>
+                                                </a>
+                                                </span>
+                                                </span>
+                                                </span>
+                                                <span class='time-info'>
+                                                            <i class='fa fa-calendar-o'></i>
+                                                            <a class='timestamp-link' href='#' rel='bookmark' title='permanent link'><abbr class='published updated' title=''>11/1/2019</abbr></a>
+                                                        </span>
+                                                <span class='comment-info'>
+                                                            <i class='fa fa-comments'></i>
+                                                            <a href='#' onclick=''>
+                                                                20 Comments
+                                                            </a>
+                                                        </span>
+                                                </div>
+                                                </a>
+                                            </article>
+                                        </div>
+                                        <!-- content 2-->
+                                        <div class='post-outer wow bounceInUp' data-wow-delay='0.2s'>
+                                            <article class='post hentry'>
+                                                <a href='#'>
+                                                    <div class='img-thumbnail'>
+                                                        <span class='overlay'>
+                                                            <div CLASS='info-wrapper'>Xem chi tiết</div>
+                                                        </span>
+                                                        <img src="https://www.uit.edu.vn/sites/vi/files/uploads/images/201902/google-maps-dan-duong-ar-1239-1549873652.jpg">
+                                                    </div>
+                                                    <h2 class='post-title entry-title'>
+                                                        <a href='#' title='Google Maps thử nghiệm tính năng tránh đi sai đường' class="wow bounce" data-wow-delay="0.5s">Google Maps thử nghiệm tính năng tránh đi sai đường</a>
+                                                    </h2>
+                                                    <div class='post-body entry-content'>
+                                                        <div>
+                                                            Ứng dụng bản đồ của Google sẽ bổ sung công nghệ thực tế tăng cường (AR) nhằm dẫn....
+                                                        </div>
+                                                    </div>
+                                                    <div class='aishare'>
+                                                        <ul>
+                                                            <li><a class='lyco-facebook' href='#' rel='nofollow noopener' target=''><i class='fab fa-facebook-f'></i><span class='inv'></span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class='post-info'>
+                                                        <span class='author-info'>
+                                                            <i class='fa fa-user'></i>
+                                                            <span class='vcard'>
+                                                                <span class='fn'>
+                                                                    <a class='g-profile' href='#' rel='author' title='author profile'>
+                                                                        <span>Trường Giang</span>
+                                                </a>
+                                                </span>
+                                                </span>
+                                                </span>
+                                                <span class='time-info'>
+                                                            <i class='fa fa-calendar-o'></i>
+                                                            <a class='timestamp-link' href='#' rel='bookmark' title='permanent link'><abbr class='published updated' title=''>1/11/2019</abbr></a>
+                                                        </span>
+                                                <span class='comment-info'>
+                                                            <i class='fa fa-comments'></i>
+                                                            <a href='#' onclick=''>
+                                                                14 Comments
+                                                            </a>
+                                                        </span>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <!-- content 3-->
+                                        <div class='post-outer wow bounceInRight' data-wow-delay='0.3s'>
+                                            <article class='post hentry'>
+                                                <a href='#'>
+                                                    <div class='img-thumbnail'>
+                                                        <span class='overlay'>
+                                                            <div CLASS='info-wrapper'>Xem chi tiết</div>
+                                                        </span>
+                                                        <img src="https://www.uit.edu.vn/sites/vi/files/resize/uploads/images/201901/5g-15459612149821504313632-620x345.jpg">
+                                                    </div>
+                                                    <h2 class='post-title entry-title'>
+                                                        <a href='#' title='5G là gì? 5G sẽ làm hoàn hảo mạng 4G' class="wow bounce" data-wow-delay="0.5s">5G là gì? 5G sẽ làm hoàn hảo mạng 4G và 3G,2G</a>
+                                                    </h2>
+                                                    <div>
+                                                        <div class='post-body entry-content'>
+                                                            <div>
+                                                                TTO - Nhiều nhà mạng trên thế giới đã chuyển lên mạng di động 5G, Việt Nam cũng đã có kế...
+                                                            </div>
+                                                        </div>
+                                                        <div class='aishare'>
+                                                            <ul>
+                                                                <li><a class='lyco-facebook' href='#' rel='nofollow noopener' target=''><i class='fab fa-facebook-f'></i><span class='inv'></span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class='post-info'>
+                                                            <span class='author-info'>
+                                                                <i class='fa fa-user'></i>
+                                                                <span class='vcard'>
+                                                                    <span class='fn'>
+                                                                        <a class='g-profile' href='#' rel='author' title='author profile'>
+                                                                            <span>Trường Giang</span>
+                                                </a>
+                                                </span>
+                                                </span>
+                                                </span>
+                                                <span class='time-info'>
+                                                                <i class='fa fa-calendar-o'></i>
+                                                                <a class='timestamp-link' href='#' rel='bookmark' title='permanent link'><abbr class='published updated' title=''>1/11/2019</abbr></a>
+                                                            </span>
+                                                <span class='comment-info'>
+                                                                <i class='fa fa-comments'></i>
+                                                                <a href='#' onclick=''>
+                                                                    6 Comments
+                                                                </a>
+                                                            </span>
+                                                </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <!-- content 4-->
+                                        <div class='post-outer wow bounceInLeft' data-wow-delay='0.3s'>
+                                            <article class='post hentry'>
+                                                <a href='#'>
+                                                    <div class='img-thumbnail'>
+                                                        <span class='overlay'>
+                                                            <div CLASS='info-wrapper'>Xem chi tiết</div>
+                                                        </span>
+                                                        <img src="https://www.uit.edu.vn/sites/vi/files/uploads/images/201803/photo-1-15198879297141725642306.jpg">
+                                                    </div>
+                                                    <h2 class='post-title entry-title'>
+                                                        <a href='#' title='Mã độc tống tiền mới lại lây lan tại Việt Nam' class="wow bounce" data-wow-delay="0.3s">Mã độc tống tiền mới lại lây lan tại Việt Nam vô cùng nhanh chóng</a>
+                                                    </h2>
+                                                    <div class='post-body entry-content'>
+                                                        <div>
+                                                            Hiện đã có hơn 3.900 trường hợp máy tính bị virus GandCrab mã hóa dữ liệu và đòi tiền chuộc...
+                                                        </div>
+                                                    </div>
+                                                    <div class='aishare'>
+                                                        <ul>
+                                                            <li><a class='lyco-facebook' href='#' rel='nofollow noopener' target=''><i class='fab fa-facebook-f'></i><span class='inv'></span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class='post-info'>
+                                                        <span class='author-info'>
+                                                            <i class='fa fa-user'></i>
+                                                            <span class='vcard'>
+                                                                <span class='fn'>
+                                                                    <a class='g-profile' href='#' rel='author' title='author profile'>
+                                                                        <span>Trường Giang</span>
+                                                </a>
+                                                </span>
+                                                </span>
+                                                </span>
+                                                <span class='time-info'>
+                                                            <i class='fa fa-calendar-o'></i>
+                                                            <a class='timestamp-link' href='#' rel='bookmark' title='permanent link'><abbr class='published updated' title=''>1/11/2019</abbr></a>
+                                                        </span>
+                                                <span class='comment-info'>
+                                                            <i class='fa fa-comments'></i>
+                                                            <a href='#' onclick=''>
+                                                                4 Comments
+                                                            </a>
+                                                        </span>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <!-- content 5-->
+                                        <div class='post-outer wow bounceInUp' data-wow-delay='0.4s'>
+                                            <article class='post hentry'>
+                                                <a href='#'>
+                                                    <div class='img-thumbnail'>
+                                                        <span class='overlay'>
+                                                            <div CLASS='info-wrapper'>Xem chi tiết</div>
+                                                        </span>
+                                                        <img src="https://www.uit.edu.vn/sites/vi/files/uploads/images/201811/photo-1-15424314813231252783435.jpg">
+                                                    </div>
+                                                    <h2 class='post-title entry-title'>
+                                                        <a href='#' title='Phát hiện 63 lỗi mới trên Windows mà người dùng cần phải cập nhật ngay' class="wow bounce" data-wow-delay="0.3s">Phát hiện 63 lỗi mới trên Windows mà người dùng cần...</a>
+                                                    </h2>
+                                                    <div class='post-body entry-content'>
+                                                        <div>
+                                                            TTO - Theo các nhà nghiên cứu bảo mật Kaspersky Labs, có 63 lỗ hổng bảo mật, trong đó ...
+                                                        </div>
+                                                    </div>
+                                                    <div class='aishare'>
+                                                        <ul>
+                                                            <li><a class='lyco-facebook' href='#' rel='nofollow noopener' target=''><i class='fab fa-facebook-f'></i><span class='inv'></span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class='post-info'>
+                                                        <span class='author-info'>
+                                                            <i class='fa fa-user'></i>
+                                                            <span class='vcard'>
+                                                                <span class='fn'>
+                                                                    <a class='g-profile' href='#' rel='author' title='author profile'>
+                                                                        <span>Trường Giang</span>
+                                                </a>
+                                                </span>
+                                                </span>
+                                                </span>
+                                                <span class='time-info'>
+                                                            <i class='fa fa-calendar-o'></i>
+                                                            <a class='timestamp-link' href='#' rel='bookmark' title='permanent link'><abbr class='published updated' title=''>1/11/2019</abbr></a>
+                                                        </span>
+                                                <span class='comment-info'>
+                                                            <i class='fa fa-comments'></i>
+                                                            <a href='#' onclick=''>
+                                                                4 Comments
+                                                            </a>
+                                                        </span>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <!-- content 6-->
+                                        <div class='post-outer wow bounceInRight' data-wow-delay='0.5s'>
+                                            <article class='post hentry'>
+                                                <a href='#'>
+                                                    <div class='img-thumbnail'>
+                                                        <span class='overlay'>
+                                                            <div CLASS='info-wrapper'>Xem chi tiết</div>
+                                                        </span>
+                                                        <img src="https://www.uit.edu.vn/sites/vi/files/uploads/images/201807/laptop-5460-1532575490.jpg">
+                                                    </div>
+                                                    <h2 class='post-title entry-title'>
+                                                        <a href='#' title='Phần mềm gián điệp lây lan trên nửa triệu máy tính tại Việt Nam' class="wow bounce" data-wow-delay="0.3s">Phần mềm gián điệp lây lan trên nửa triệu máy...</a>
+                                                    </h2>
+                                                    <div class='post-body entry-content'>
+                                                        <div>
+                                                            Hiện có hơn 560.000 máy tính hoạt động ở Việt Nam bị theo dõi bởi chương trình...
+                                                        </div>
+                                                    </div>
+                                                    <div class='aishare'>
+                                                        <ul>
+                                                            <li><a class='lyco-facebook' href='#' rel='nofollow noopener' target=''><i class='fab fa-facebook-f'></i><span class='inv'></span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class='post-info'>
+                                                        <span class='author-info'>
+                                                            <i class='fa fa-user'></i>
+                                                            <span class='vcard'>
+                                                                <span class='fn'>
+                                                                    <a class='g-profile' href='#' rel='author' title='author profile'>
+                                                                        <span>Trường Giang</span>
+                                                </a>
+                                                </span>
+                                                </span>
+                                                </span>
+                                                <span class='time-info'>
+                                                            <i class='fa fa-calendar-o'></i>
+                                                            <a class='timestamp-link' href='#' rel='bookmark' title='permanent link'><abbr class='published updated' title=''>1/11/2019</abbr></a>
+                                                        </span>
+                                                <span class='comment-info'>
+                                                            <i class='fa fa-comments'></i>
+                                                            <a href='#' onclick=''>
+                                                                2 Comments
+                                                            </a>
+                                                        </span>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <!-- content 7-->
+                                        <div class='post-outer wow bounceInLeft' data-wow-delay='0.3s'>
+                                            <article class='post hentry'>
+                                                <a href='#'>
+                                                    <div class='img-thumbnail'>
+                                                        <span class='overlay'>
+                                                            <div CLASS='info-wrapper'>Xem chi tiết</div>
+                                                        </span>
+                                                        <img src="https://www.uit.edu.vn/sites/vi/files/uploads/images/201807/bitcoin-miner-15303491562892046643850.jpg">
+                                                    </div>
+                                                    <h2 class='post-title entry-title'>
+                                                        <a href='#' title='Hơn 735.000 máy tính tại Việt Nam bị nhiễm virus đào tiền ảo' class="wow bounce" data-wow-delay="0.5s">Hơn 735.000 máy tính tại Việt Nam bị nhiễm virus...</a>
+                                                    </h2>
+                                                    <div class='post-body entry-content'>
+                                                        <div>
+                                                            TTO - Công ty an ninh mạng Bkav vừa lên tiếng cảnh báo đã có hơn 735.000 máy....
+                                                        </div>
+                                                    </div>
+                                                    <div class='aishare'>
+                                                        <ul>
+                                                            <li><a class='lyco-facebook' href='#' rel='nofollow noopener' target=''><i class='fab fa-facebook-f'></i><span class='inv'></span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class='post-info'>
+                                                        <span class='author-info'>
+                                                            <i class='fa fa-user'></i>
+                                                            <span class='vcard'>
+                                                                <span class='fn'>
+                                                                    <a class='g-profile' href='#' rel='author' title='author profile'>
+                                                                        <span>Trường Giang</span>
+                                                </a>
+                                                </span>
+                                                </span>
+                                                </span>
+                                                <span class='time-info'>
+                                                            <i class='fa fa-calendar-o'></i>
+                                                            <a class='timestamp-link' href='#' rel='bookmark' title='permanent link'><abbr class='published updated' title=''>1/11/2019</abbr></a>
+                                                        </span>
+                                                <span class='comment-info'>
+                                                            <i class='fa fa-comments'></i>
+                                                            <a href='#' onclick=''>
+                                                                99 Comments
+                                                            </a>
+                                                        </span>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <!-- content 8-->
+                                        <div class='post-outer wow bounceInUp' data-wow-delay='0.4s'>
+                                            <article class='post hentry'>
+                                                <a href='#'>
+                                                    <div class='img-thumbnail'>
+                                                        <span class='overlay'>
+                                                            <div CLASS='info-wrapper'>Xem chi tiết</div>
+                                                        </span>
+                                                        <img src="https://www.uit.edu.vn/sites/vi/files/uploads/images/201806/usb-15281859757851483723012.jpg">
+                                                    </div>
+                                                    <h2 class='post-title entry-title'>
+                                                        <a href='#' title='Cảnh báo lây nhiễm virus nguy hiểm xóa dữ liệu trên USB tại Việt Nam' class="wow bounce" data-wow-delay="0.5s">Cảnh báo lây nhiễm virus nguy hiểm xóa dữ liệu...</a>
+                                                    </h2>
+                                                    <div class='post-body entry-content'>
+                                                        <div>
+                                                            TTO - Virus nguy hiểm W32.XFileUSB đã lây nhiễm 1,2 triệu máy tính tại Việt Nam...
+                                                        </div>
+                                                    </div>
+                                                    <div class='aishare'>
+                                                        <ul>
+                                                            <li><a class='lyco-facebook' href='#' rel='nofollow noopener' target=''><i class='fab fa-facebook-f'></i><span class='inv'></span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class='post-info'>
+                                                        <span class='author-info'>
+                                                            <i class='fa fa-user'></i>
+                                                            <span class='vcard'>
+                                                                <span class='fn'>
+                                                                    <a class='g-profile' href='#' rel='author' title='author profile'>
+                                                                        <span>Trường Giang</span>
+                                                </a>
+                                                </span>
+                                                </span>
+                                                </span>
+                                                <span class='time-info'>
+                                                            <i class='fa fa-calendar-o'></i>
+                                                            <a class='timestamp-link' href='#' rel='bookmark' title='permanent link'><abbr class='published updated' title=''>1/11/2019</abbr></a>
+                                                        </span>
+                                                <span class='comment-info'>
+                                                            <i class='fa fa-comments'></i>
+                                                            <a href='#' onclick=''>
+                                                                29 Comments
+                                                            </a>
+                                                        </span>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <!-- content 9-->
+                                        <div class='post-outer wow bounceInRight' data-wow-delay='0.5s'>
+                                            <article class='post hentry'>
+                                                <a href='#'>
+                                                    <div class='img-thumbnail'>
+                                                        <span class='overlay'>
+                                                            <div CLASS='info-wrapper'>Xem chi tiết</div>
+                                                        </span>
+                                                        <img src="https://www.uit.edu.vn/sites/vi/files/uploads/images/201804/photo-1-15239400467281097517808.jpg">
+                                                    </div>
+                                                    <h2 class='post-title entry-title'>
+                                                        <a href='#' title='Hơn 5.000 ứng dụng Android nguy hiểm đang theo' class="wow bounce" data-wow-delay="0.5s">Hơn 5.000 ứng dụng Android nguy hiểm đang theo...</a>
+                                                    </h2>
+                                                    <div class='post-body entry-content'>
+                                                        <div>
+                                                            TTO - Các nhà nghiên cứu tại Học viện Khoa học Máy tính Quốc tế Berkeley...
+                                                        </div>
+                                                    </div>
+                                                    <div class='aishare'>
+                                                        <ul>
+                                                            <li><a class='lyco-facebook' href='#' rel='nofollow noopener' target=''><i class='fab fa-facebook-f'></i><span class='inv'></span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class='post-info'>
+                                                        <span class='author-info'>
+                                                            <i class='fa fa-user'></i>
+                                                            <span class='vcard'>
+                                                                <span class='fn'>
+                                                                    <a class='g-profile' href='#' rel='author' title='author profile'>
+                                                                        <span>Trường Giang</span>
+                                                </a>
+                                                </span>
+                                                </span>
+                                                </span>
+                                                <span class='time-info'>
+                                                            <i class='fa fa-calendar-o'></i>
+                                                            <a class='timestamp-link' href='#' rel='bookmark' title='permanent link'><abbr class='published updated' title=''>1/11/2019</abbr></a>
+                                                        </span>
+                                                <span class='comment-info'>
+                                                            <i class='fa fa-comments'></i>
+                                                            <a href='#' onclick=''>
+                                                                2 Comment
+                                                            </a>
+                                                        </span>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <!-- content 10-->
+                                        <div class='post-outer wow bounceInLeft' data-wow-delay='0.3s'>
+                                            <article class='post hentry'>
+                                                <a href='#'>
+                                                    <div class='img-thumbnail'>
+                                                        <span class='overlay'>
+                                                            <div CLASS='info-wrapper'>Xem chi tiết</div>
+                                                        </span>
+                                                        <img src="https://image1.ictnews.vn/_Files/2019/11/03/sinh_vien_voi_an_toan_thong_tin_2.jpg">
+                                                    </div>
+                                                    <h2 class='post-title entry-title'>
+                                                        <a href='#' title='Thi sơ khảo “Sinh viên với An toàn thông tin ASEAN 2019”' class="wow bounce" data-wow-delay="0.5s">“Sinh viên với An toàn thông tin ASEAN 2019”...</a>
+                                                    </h2>
+                                                    <div class='post-body entry-content'>
+                                                        <div>
+                                                            Vòng thi sơ khảo cuộc thi “Sinh viên với An toàn thông tin ASEAN 2019”...
+                                                        </div>
+                                                    </div>
+                                                    <div class='aishare'>
+                                                        <ul>
+                                                            <li><a class='lyco-facebook' href='#' rel='nofollow noopener' target=''><i class='fab fa-facebook-f'></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class='post-info'>
+                                                        <span class='author-info'>
+                                                            <i class='fa fa-user'></i>
+                                                            <span class='vcard'>
+                                                                <span class='fn'>
+                                                                    <a class='g-profile' href='#' rel='author' title='author profile'>
+                                                                        <span>Trường Giang</span>
+                                                </a>
+                                                </span>
+                                                </span>
+                                                </span>
+                                                <span class='time-info'>
+                                                            <i class='fa fa-calendar-o'></i>
+                                                            <a class='timestamp-link' href='#' rel='bookmark' title='permanent link'><abbr class='published updated' title=''>1/11/2019</abbr></a>
+                                                        </span>
+                                                <span class='comment-info'>
+                                                            <i class='fa fa-comments'></i>
+                                                            <a href='#' onclick=''>
+                                                                12 Comment
+                                                            </a>
+                                                        </span>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <!-- content 11-->
+                                        <div class='post-outer wow bounceInUp' data-wow-delay='0.4s'>
+                                            <article class='post hentry'>
+                                                <a href='#'>
+                                                    <div class='img-thumbnail'>
+                                                        <span class='overlay'>
+                                                            <div CLASS='info-wrapper'>Xem chi tiết</div>
+                                                        </span>
+                                                        <img src="https://image1.ictnews.vn/_Files/2019/10/18/dien-tap-2-1.jpg">
+                                                    </div>
+                                                    <h2 class='post-title entry-title'>
+                                                        <a href='#' title='Cán bộ CNTT ngành hàng không tập dượt ứng phó hacker' class="wow bounce" data-wow-delay="0.5s">Cán bộ CNTT ngành hàng không tập dượt ứng phó...</a>
+                                                    </h2>
+                                                    <div class='post-body entry-content'>
+                                                        <div>
+                                                            Diễn tập ứng phó hành vi can thiệp bất hợp pháp vào hệ thống thông tin...
+                                                        </div>
+                                                    </div>
+                                                    <div class='aishare'>
+                                                        <ul>
+                                                            <li><a class='lyco-facebook' href='#' rel='nofollow noopener' target=''><i class='fab fa-facebook-f'></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class='post-info'>
+                                                        <span class='author-info'>
+                                                            <i class='fa fa-user'></i>
+                                                            <span class='vcard'>
+                                                                <span class='fn'>
+                                                                    <a class='g-profile' href='#' rel='author' title='author profile'>
+                                                                        <span>Trường Giang</span>
+                                                </a>
+                                                </span>
+                                                </span>
+                                                </span>
+                                                <span class='time-info'>
+                                                            <i class='fa fa-calendar-o'></i>
+                                                            <a class='timestamp-link' href='#' rel='bookmark' title='permanent link'><abbr class='published updated' title=''>1/11/2019</abbr></a>
+                                                        </span>
+                                                <span class='comment-info'>
+                                                            <i class='fa fa-comments'></i>
+                                                            <a href='#' onclick=''>
+                                                                22 Comment
+                                                            </a>
+                                                        </span>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <!-- content 12-->
+                                        <div class='post-outer wow bounceInRight' data-wow-delay='0.5s'>
+                                            <article class='post hentry'>
+                                                <a href='#'>
+                                                    <div class='img-thumbnail'>
+                                                        <span class='overlay'>
+                                                            <div CLASS='info-wrapper'>Xem chi tiết</div>
+                                                        </span>
+                                                        <img src="https://image1.ictnews.vn/_Files/2019/05/17/ictnews_trung_tam_dien_hanh_an_ninh_mang_3.jpg">
+                                                    </div>
+                                                    <h2 class='post-title entry-title'>
+                                                        <a href='#' title='Bkav: Chống tấn công APT cũng cần chuyển dịch' class="wow bounce" data-wow-delay="0.5s">Bkav: Chống tấn công APT cũng cần chuyển dịch...</a>
+                                                    </h2>
+                                                    <div class='post-body entry-content'>
+                                                        <div>
+                                                            Nhận định an ninh mạng đang diễn biến theo cách thức mới với mức độ...
+                                                        </div>
+                                                    </div>
+                                                    <div class='aishare'>
+                                                        <ul>
+                                                            <li><a class='lyco-facebook' href='#' rel='nofollow noopener' target=''><i class='fab fa-facebook-f'></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class='post-info'>
+                                                        <span class='author-info'>
+                                                            <i class='fa fa-user'></i>
+                                                            <span class='vcard'>
+                                                                <span class='fn'>
+                                                                    <a class='g-profile' href='#' rel='author' title='author profile'>
+                                                                        <span>Trường Giang</span>
+                                                                    </a>
+                                                                </span>
+                                                            </span>
+                                                        </span>
+                                                    <span class='time-info'>
+                                                            <i class='fa fa-calendar-o'></i>
+                                                            <a class='timestamp-link' href='#' rel='bookmark' title='permanent link'><abbr class='published updated' title=''>1/11/2019</abbr></a>
+                                                        </span>
+                                                    <span class='comment-info'>
+                                                            <i class='fa fa-comments'></i>
+                                                            <a href='#' onclick=''>
+                                                                21 Comment
+                                                            </a>
+                                                    </span>
+                                                </div>
+                                            </article>
+                                        </div>
+
+                                        <!-- pagination-->
+                                        <div class="example">
+                                            <div class="page-order">
+                                                <ul class="pagination">
+                                                    <li><a href="#" class="wow bounceInLeft" data-wow-delay="0.3s">&laquo;</a></li>
+                                                    <li><a href="#" class="wow bounceInLeft" data-wow-delay="0.2s">1</a></li>
+                                                    <li><a href="#" class="wow bounceInLeft" data-wow-delay="0.1s">2</a></li>
+                                                    <li><a href="#" class="wow wobble" data-wow-delay="0.1s">3</a></li>
+                                                    <li><a href="#" class="wow bounceInRight" data-wow-delay="0.1s">4</a></li>
+                                                    <li><a href="#" class="wow bounceInRight" data-wow-delay="0.2s">5</a></li>
+                                                    <li><a href="#" class="wow bounceInRight" data-wow-delay="0.3s">&raquo;</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class='clear'></div>
+                                    </div>
+
+                                    <!-- SHOW POSTS -->
+                                    <div class="show-post">
+                                        <div class="show">
+                                            
+                                            <div class="show-content">
+                                                <h3>Google phát hiện lỗ hổng bảo mật trên một loạt smartphone</h3>
+                                                <div class="poster"><i class="date-post"> <span><i class="fas fa-user-edit"></i> Đăng bởi Trường Giang</span> 21:15 T4,13/11/2019</i></div>
+                                                <h5>Nhiều mẫu Android của Samsung, Xiaomi, Huawei và cả Google xuất hiện trở lại một lỗ hổng bảo mật khiến kẻ xấu có thể chiếm quyền kiểm soát thiết bị.
+                                                    Lỗ hổng bảo mật này đã có bản vá từ tháng 12/2017 nhưng giờ xuất hiện trở lại trên các smartphone Android. Nó vừa được nhóm nghiên cứu bảo mật của Google công bố cuối tháng 9/2019.               
+                                                    Số lượng smartphone bị ảnh hưởng khá nhiều tới từ các nhà sản xuất khác nhau, nhưng tất cả đều ra mắt từ năm ngoái trở về trước. Một số model đáng chú ý là Galaxy S7, S8 và S9 hay 
+                                                    P20 của Huawei, Xiaomi A1, Redmi Note 5... Ngay cả bộ đôi Pixel thế hệ đầu và Pixel 2 của Google cũng được cho dính lỗ hổng bảo mật này.
+                                                </h5>
+                                                <p><img src="https://www.uit.edu.vn/sites/vi/files/uploads/images/201910/d226y-l224-chiec-smartphone-hu-2661-1720-1570333631.jpg" alt="img ">
+                                                <span><i>Google phát hiện lỗ hổng bảo mật trên một loạt smartphone </i></span></p>
+                                                <h5>
+                                                    Lỗ hổng bảo mật này khiến kẻ xấu có thể cài đặt được các phần mềm gián điệp và chiếm quyền kiểm soát thiết bị. Tuy nhiên, Google cho biết nó không nguy hiểm đến vậy khi phần mềm gián điệp 
+                                                    vẫn phải cần đến người dùng cấp quyền mới có thể xâm nhập, chứ không thể tự động hay âm thầm lây nhiễm vào thiết bị.
+                                                    Các nhà sản xuất đã được thông báo về lỗ hổng. Các máy Pixel sẽ được Google cập nhật phần mềm trong tháng này. Tuy nhiên, lịch trình của các nhà sản xuất khác chưa rõ.
+                                                    Lỗ hổng bảo mật trên hàng loạt thiết bị Android trên mà Google vừa phát hiện được cho xuất phát từ NSO, một nhóm tới từ Israel chuyên nhằm vào các tổ chức nhân quyền và hoạt động chính trị.
+                                                </h5>
+
+                                            </div>
+                                            <div class="icon-home">
+                                                <span><a href="#"><i class="fas fa-arrow-circle-left"></i></a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--FOOTER-->
+                                    <footer id='copyright'>
+                                        <ul>
+                                            <li class='fb-item'>
+                                                <a href='https://www.facebook.com/kitclubKMA/' rel='nofollow noopener' target='' title='Follow Us on Facebook' class="wow bounceInLeft"><i class='fab fa-facebook-square' style="cursor: pointer;"></i></span></a>
+                                            </li>
+                                            <li class='instagram-item'>
+                                                <a href='#' rel='nofollow noopener' target='' title='Follow Us on Instagram' class="wow bounceInLeft"><i class='fab fa-instagram'></i></a>
+                                            </li>
+                                            <li class='youtube-item'>
+                                                <a href='https://www.youtube.com/channel/UC5CovAS1QaortxkoZvc30Vw' rel='nofollow noopener' target='' title='Follow Us on Youtube' class="wow wobble"><i class='fab fa-youtube-square'></i></a>
+                                            </li>
+                                            <li class="email-item">
+                                                <a href="#" rel="nofollow noopener" target='' title='Follow Us on Email' class="wow bounceInRight"><i class="fas fa-envelope-square"></i></a>
+                                            </li>
+                                            <li class="googlemap-item">
+                                                <a href="https://www.google.com/maps/place/H%E1%BB%8Dc+vi%E1%BB%87n+K%E1%BB%B9+thu%E1%BA%ADt+M%E1%BA%ADt+m%C3%A3/@20.9801386,105.7936295,17z/data=!3m1!4b1!4m5!3m4!1s0x3135acc508f938fd:0x883e474806a2d1f2!8m2!3d20.9801336!4d105.7958182" rel="nofollow noopener"
+                                                    target='' title='Follow Us on Map' class="wow bounceInRight"><i class="fas fa-globe-americas"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div id='copy' class="wow bounceInDown">
+                                            Copyright &#169; <span id='current-year'></span>
+                                            <a href='#'>KIT</a> All Right Reserved
+                                        </div>
+                                    </footer>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LOGIN PC -->
+    <div class="modal fade" id="modal-id">
+        <div class="modal-body">
+            <div class="container">
+                <div class="form_content" align="center">
+                    <h2>Đăng nhập nếu bạn là thành viên</h2>
+                    <h1 id="kitclub">CLB KIT !</h1>
+
+                </div>
+                <div class="login_form">
+                    <h1 align="center">Đăng nhập</h1>
+                    <form action="">
+                        <input type="text" name="" required="" placeholder="Tài khoản">
+                        <input type="password" name="" required="" placeholder="Mật khẩu">
+                        <input type="submit" name="" value="Đăng nhập">
+                    </form>
+                    <a data-toggle="modal" href='#modal-pass'>Quên mật khẩu</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FORGET PASSWORD PC -->
+    <div class="modal fade" id="modal-pass">
+        <div class="modal-body ">
+            <div class="container">
+                <div class="form_content" align="center">
+                    <h2>Đăng nhập nếu bạn là thành viên</h2>
+                    <h1 id="kitclub">CLB KIT !</h1>
+
+                </div>
+                <div class="login_form">
+
+                    <h1 align="center" style="font-size: 20px">Hãy nhập Tài khoản và Email !</h1>
+                    <form>
+                        <input type="text" name="username" placeholder="Tài khoản:">
+                        <input type="email" name="" required="" placeholder="Email: ">
+                        <input type="submit" class="foget_pass" onclick="foget_pass()" name="" value="Lấy lại mật khẩu">
+                        <div id="notification_pass"></div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- LOGIN MOBILE -->
+    <div class="modal fade" id="modal-id-mobile">
+        <div class="modal-body mobile">
+            <div class="container">
+                <div class="login_form">
+                    <h1 align="center">Đăng nhập</h1>
+                    <form action="">
+                        <input type="text" name="" required="" placeholder="Tài khoản">
+                        <input type="password" name="" required="" placeholder="Mật khẩu">
+                        <input type="submit" name="" value="Đăng nhập">
+                    </form>
+                    <a data-toggle="modal" href='#modal-pass-mobile'>Quên mật khẩu</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- FORGET PASSWORD MOBILE -->
+    <div class="modal fade" id="modal-pass-mobile">
+        <div class="modal-body mobile">
+            <div class="container">
+                <div class="login_form">
+                    <h1 align="center" style="font-size: 20px">Hãy nhập Tài khoản và Email !</h1>
+                    <form>
+                        <input type="text" name="username" placeholder="Tài khoản:">
+                        <input type="email" name="" required="" placeholder="Email: ">
+                        <input type="submit" class="foget_pass" onclick="foget_pass()" name="" value="Lấy lại mật khẩu">
+                        <div id="notification_pass"></div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Thời khóa biểu mobile  -->
+    <div class="modal fade" id="modal-id-tkb">
+        <div class="modal-body mobile">
+            <div class="container">
+                <div class="login_form">
+                    <h1 align="center">Đăng nhập tài khoản SV</h1>
+                    <form action="">
+                        <input type="text" name="" required="" placeholder="Mã sinh viên:">
+                        <input type="password" name="" required="" placeholder="Mật khẩu:">
+                        <input type="submit" name="" value="Đăng nhập">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Thời khóa biểu - PC -->
+    <div class="modal fade" id="modal-id-tkb-pc">
+        <div class="modal-body">
+            <div class="container">
+                <div class="form_content" align="center">
+                    <h2>Xem thời khóa biểu sinh viên</h2>
+                    <h1 id="kitclub">CLB KIT !</h1>
+
+                </div>
+                <div class="login_form">
+                    <h1 align="center">Đăng nhập tài khoản SV</h1>
+                    <form action="">
+                        <input type="text" name="" required="" placeholder="Mã sinh viên:">
+                        <input type="password" name="" required="" placeholder="Mật khẩu:">
+                        <input type="submit" name="" value="Đăng nhập">
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</HTML>
